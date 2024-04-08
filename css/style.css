@@ -1,0 +1,344 @@
+body{
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: hsl(60, 56%, 91%);
+    color: hsl(0, 0%, 0%);
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1, h2{
+    margin: 0;
+    padding: 1em 0;
+}
+
+p{
+    margin: 0;
+    padding: 1em 0;
+}
+
+.maincontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.NavigationBar{
+    display: block;
+}
+
+.NavigationBar ul{
+    display: block;
+    list-style-type: none;
+    background-color: hsl(0, 0%, 0%);
+    padding: 0px;
+}
+
+.NavigationBar a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    display: block;
+}
+
+.NavigationBar a:hover{
+    background-color: hsl(0, 0%, 25%);
+    text-decoration: underline;
+}
+.active{
+    background-color: hsl(120, 100%, 25%);
+    text-decoration: underline;
+    border: 2px dashed white;
+}
+
+.skipbutton{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skipbutton:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+.aboutme{
+    text-align: center;
+    grid-column: 1/-1;
+}
+
+.about-me-photo{
+    max-height: 650px;
+    max-width: 650px;
+    grid-column: 1/-1;
+    grid-row: 2;
+    overflow: hidden;
+}
+
+.travelpage{
+    grid-column: 1/span 1;
+    grid-row-start: 4;
+}
+
+.recipepage{
+    grid-column: 2/span 1;
+    grid-row-start: 4;
+}
+
+.birdpage{
+    grid-column: 3/span 1;
+    grid-row-start: 4;
+}
+
+/*seperate links dec*/
+.birdpage a, .travelpage a, .recipepage a:hover{
+    text-decoration: underline;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.madrid, .barcelona, .nyc, .rome, .miami{
+    grid-column: 1/-1;
+}
+.pebble{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+}
+
+
+.yumi{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+}
+
+
+.theo{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+}
+
+.link{
+    text-decoration: underline;
+}
+
+.bunthit img{
+    grid-column: 1/-1;
+    grid-row-start: 1;
+}
+.Paella img{
+    grid-column: 1/-1;
+    grid-row-start: 2;
+}
+.tiramisu img{
+    grid-column: 1/-1;
+    grid-row-start: 3;
+}
+
+
+/*media queries*/
+@media only screen and (min-width: 900px){
+    h1{
+        font-size: 50px;
+        border: solid 2px black;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 35% 35% 35%;
+    }
+
+    .NavigationBar ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    img{
+        border-radius: 35%;
+        height: 50%;
+    }
+    .about-me-photo{
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+        width: 50%;
+        border-radius: 0%;
+    }
+    .about-me-photo img{
+        border-radius: 30%;
+        height: 80%;
+    }
+    .btrecipeimage{
+        grid-column: 1/span 2;
+        grid-row-start: 1;
+        border-radius: 30%;
+    }
+    .precipeimage{
+        grid-column: 1/span 2;
+        grid-row-start: 2;
+    }
+    .trecipeimage{
+        grid-column: 1/span 1;
+        grid-row-start: 3;
+    }
+    .btrecipetitle{
+        grid-column: 4/span 1;
+        grid-row-start: 1;
+    }
+    .precipetitle{
+        grid-column: 4/span 1;
+        grid-row-start: 2;
+    }
+    .trecipetitle{
+        grid-column: 4/span 1;
+        grid-row-start: 3;
+    }
+
+    /*travel*/
+    .madrid, .pebble{
+        grid-column: 1/span 1;
+        grid-row-start: 1;
+    }
+    .barcelona, .yumi{
+        grid-column: 2/span 1;
+        grid-row-start: 1;
+    }
+    .rome, .theo{
+        grid-column: 3/span 1;
+        grid-row-start: 1;
+    }
+
+    .miami{
+        grid-column: 1/span 1;
+        grid-row-start: 2;
+    }
+    .nyc{
+        grid-column: 2/span 1;
+        grid-row-start: 2;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px){
+    .aboutme{
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+    }
+
+    h1{
+        font-size: 75px;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        border: none;
+    }
+    .aboutme p{
+        font-size: 50px;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        display: none;
+    }
+
+    .about-me-photo{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-bottom: 50px;
+    }
+
+    .about-me-photo img{
+        border-radius: 0%;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        height: 400px;
+        width: 300px;
+        border-bottom: 2px black solid;
+        border-left: 2px black solid;
+    }
+
+    .about-me-photo p{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        border-top: 2px black solid;
+        border-right: 2px black solid;
+    }
+    .travelpage a, .birdpage a, .recipepage a{
+        font-size: 35px;
+        text-decoration: underline;
+    }
+  .pebble, .yumi, .theo{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: auto;
+    width: auto;
+    justify-content: center;
+  }
+
+  .grid{
+   display: grid;
+   grid-template-columns: repeat(4,25%);
+  }
+
+
+
+  .madrid, .barcelona{
+    grid-row-start: 1;
+  }
+  .madrid, .nyc{
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+
+  .barcelona, .miami{
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
+
+  .nyc, .miami{
+    grid-row-start: 2;
+  }
+
+  .rome{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .rome img, .madrid img, .nyc img, .miami img, .barcelona img{
+    height: 250px;
+    width: 250px;
+  }
+
+  .playlist{
+    grid-row-start: 3;
+    grid-column-start: 3;
+  }
+
+  .bunthit img, .Paella img, .tiramisu img{
+    height: 250px;
+    width: 250px;
+  }
+
+  #CurrentTime{
+    text-align: center;
+    border: 2px solid black;
+  }
+}
+
